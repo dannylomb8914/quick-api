@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        PATH = "/usr/local/bin:$PATH"  // Add Docker's installation path
+    }
 
     stages {
         stage('Checkout Code') {
