@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3010;
 
 // Define a simple GET route
 app.get("/", (req, res) => {
-    res.json({ message: "Hello, Jenkins v2!" });
+    res.json({ message: "Hello, Wesley v2!" });
 });
 
 // Start the server
