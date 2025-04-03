@@ -31,7 +31,7 @@ pipeline {
                     fi
 
                     # Run the new container
-                    docker run -d -p 3010:3010 --name node-api-container node-api:latest
+                    docker run -d -p 3011:3011 --name node-api-container node-api:latest
                     '''
                 }
             }
