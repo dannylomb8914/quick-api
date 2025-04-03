@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { label 'trent'}
     environment {
         PATH = "/usr/local/bin:$PATH"  // Add Docker's installation path
     }
