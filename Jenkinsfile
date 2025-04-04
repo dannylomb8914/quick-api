@@ -16,7 +16,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    def image = docker.build("${IMAGE_NAME}:${TAG}")
+                    sh "docker build -t node-api:latest ." docker.build("${IMAGE_NAME}:${TAG}")
                 }
             }
         }
@@ -36,7 +36,7 @@ pipeline {
                     docker run -d -p 3011:3011 --name node-api-container \
                     --restart unless-stopped \
                     -v /tmp:/new \
-                    ${IMAGE_NAME}:${TAG} \
+                    ${IMAGE_NAME}:${TAG}
                     '''
                 }
             }
